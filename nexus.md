@@ -22,4 +22,9 @@ Started Sonatype Nexus OSS 3.20.1-01
 
 -------------------------------------------------
 ```
+1. Open 8081 port
+```
+# firewall-cmd --zone=public --add-port=8081/tcp --permanent
+success
+```
 1. access `http://localhost:8081/` from blowser
