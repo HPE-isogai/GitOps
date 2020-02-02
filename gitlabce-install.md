@@ -54,6 +54,15 @@ sudo lokkit -s http -s ssh
 #use http:// if you use self signed certificate  
 sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>" yum -y install gitlab-ce  
 
+## Configure Docker Registry
+#1. Run docker registy in gitlab server
+#https://docs.gitlab.com/ee/administration/packages/container_registry.html
+#1. Set Insecure registry
+#2. configure `/etc/gitlab/gitlab.rb`  
+#https://docs.gitlab.com/ee/administration/packages/container_registry.html
+#* modify `registry_external_url`  
+#3. `gitlab-ctl reconfigure`  
+
 ## If you fail fail install
 - when you want reinstall package  
 ```
