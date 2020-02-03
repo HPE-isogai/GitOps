@@ -1,9 +1,9 @@
 ## Links
-https://qiita.com/Imasug/items/71d2ff21c7d1d3454bff
-https://help.sonatype.com/learning/repository-manager-3/first-time-installation-and-setup/lesson-1%3A--installing-and-starting-nexus-repository-manager#Lesson1:InstallingandStartingNexusRepositoryManager-DownloadingtheRepositoryManager
-https://www.liquidweb.com/kb/install-java-8-on-centos-7/
-https://www.rootusers.com/how-to-open-a-port-in-centos-7-with-firewalld/
-https://qiita.com/fukasawah/items/48330564736d3368b632
+https://qiita.com/Imasug/items/71d2ff21c7d1d3454bff  
+https://help.sonatype.com/learning/repository-manager-3/first-time-installation-and-setup/lesson-1%3A--installing-and-starting-nexus-repository-manager#Lesson1:InstallingandStartingNexusRepositoryManager-DownloadingtheRepositoryManager  
+https://www.liquidweb.com/kb/install-java-8-on-centos-7/  
+https://www.rootusers.com/how-to-open-a-port-in-centos-7-with-firewalld/  
+https://qiita.com/fukasawah/items/48330564736d3368b632  
 
 
 ## Environment
@@ -51,3 +51,12 @@ success
 
 ## Make Service
 https://help.sonatype.com/repomanager3/installation/run-as-a-service#RunasaService-systemd
+
+
+## Confirmation (From docker client)
+1. Create `Dockerfile`
+1. Build image with `docker build -t <tagname>
+1. tag the image `docker tag <local image:tag> <remote image:tag>
+1. `docker login http://<nexus-ip>:<nexus-docker-port>`
+1. docker push <remote image:tag>
+  
