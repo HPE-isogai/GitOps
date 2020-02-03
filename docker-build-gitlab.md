@@ -4,7 +4,7 @@ https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
 ## Prerequisite
 Install docker on gitlab server
 
-## Procedure
+## Setup Procedure
 1. Confirm gitlab runnner parameter via gitlab-UI -> Admin Area -> Runners, `Set up a shared Runner manually`
 1. make command as below
 ```
@@ -33,4 +33,18 @@ sudo usermod -aG docker gitlab-runner
 sudo -u gitlab-runner -H docker info
 ```
 
+## .gitlab-ci.yml example
+```
+$ cat .gitlab-ci.yml
+image: docker:19.03-rc-git
+
+before_script:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS http://$DOCKER_REG_URL
+
+build_image:
+  script:
+    - docker build -t demo-nodejs:$DOCKER_IMAGE_VERSION .
+    - docker tag demo-nodejs:$DOCKER_IMAGE_VERSION $DOCKER_REG_URL/demo-nodejs:$DOCKER_IMAGE_VERSION
+    - docker push $DOCKER_REG_URL/demo-nodejs:$DOCKER_IMAGE_VERSION
+```
 
