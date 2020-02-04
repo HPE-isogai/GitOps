@@ -59,4 +59,7 @@ https://help.sonatype.com/repomanager3/installation/run-as-a-service#RunasaServi
 1. tag the image `docker tag <local image:tag> <remote image:tag>
 1. `docker login http://<nexus-ip>:<nexus-docker-port>`
 1. docker push <remote image:tag>
-  
+
+## Insecure Registry
+https://github.com/Juniper/contrail-docker/wiki/Configure-docker-service-to-use-insecure-registry
+#If you dont set this up, you cannot log in to insecure registry as well as client side
