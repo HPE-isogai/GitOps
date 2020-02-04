@@ -33,6 +33,11 @@ sudo usermod -aG docker gitlab-runner
 sudo -u gitlab-runner -H docker info
 ```
 
+## Modify CI/CD parameter
+Project->Settings->General Pipelines
+Git Shallow clone -> 0
+#set proper settings depended on your environment
+
 ## .gitlab-ci.yml example
 ```
 $ cat .gitlab-ci.yml
