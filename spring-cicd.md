@@ -207,4 +207,7 @@ test:
 ## push code in Gitlab
 
 
+## Tasks
+Store Artifact into Nexus
+https://medium.com/@simionrazvan/how-to-create-a-gradle-library-and-publish-it-on-nexus-34be19b520aa
 
