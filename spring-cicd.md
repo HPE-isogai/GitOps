@@ -210,4 +210,45 @@ test:
 ## Tasks
 Store Artifact into Nexus
 https://medium.com/@simionrazvan/how-to-create-a-gradle-library-and-publish-it-on-nexus-34be19b520aa
+https://blog.sonatype.com/using-nexus-3-as-your-repository-part-1-maven-artifacts
+https://qiita.com/Toshimichi/items/fa17656f862ada2cfde4
 
+1. Install `gradle`
+https://linux4one.com/how-to-install-gradle-on-centos-7/
+1. apply plugin
+add `build.gradle`  
+```
+apply plugin: 'maven-publish'
+```
+add publish definition
+```
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourceJar {
+                classifier 'sources'
+            }
+        }
+    }
+    repositories {
+        def properties = new Properties()
+        file('secret.properties').withInputStream { properties.load(it) }
+        maven {
+            url properties.getProperty 'url'
+            credentials {
+                username = properties.getProperty 'username' 
+                password = properties.getProperty 'password' 
+            }
+        }
+    }
+}
+```
+1. add property values into `secret.properties`
+```
+username=ユーザー名
+password=パスワード
+url=URL
+```
+1. Create Repository in Nexus
+Create repository -> Maven2(group) -> "spring-demo" -> Add maven* to members 
