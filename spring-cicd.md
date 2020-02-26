@@ -165,6 +165,7 @@ REPOSITORY                              TAG                 IMAGE ID            
 springio/gs-spring-boot-docker          latest              3c0c9919a4d9        35 hours ago        285MB
 openjdk                                 11.0.5-jre          0bf8ab4c4d20        8 weeks ago         267MB
 ```
+
 ## Push Docker image to registry
 docker tag springio/gs-spring-boot-docker:latest 10.0.0.131:5000/gs-spring-boot-docker:0.1
 docker push 10.0.0.131:5000/gs-spring-boot-docker:0.1
@@ -200,6 +201,10 @@ test:
     - oc get route gs-spring-boot-docker --kubeconfig=/var/gitlab/cert/kubeconfig
 ```
 
+## Set kubeconfig in Gitlab server
+
+
+## push code in Gitlab
 
 
 
