@@ -2,6 +2,8 @@
 http://10.0.0.130/tetsuya.isogai/spring-demo/tree/master
 
 <details>
+<pre>
+<code>
 .
 ├── Dockerfile
 ├── README.md
@@ -107,6 +109,8 @@ http://10.0.0.130/tetsuya.isogai/spring-demo/tree/master
                             └── demo
                                 └── DemoApplicationTests.java
 
+</pre>
+</code>
 </details>
 
 ## Change Java Code
