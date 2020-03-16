@@ -38,21 +38,18 @@ sudo lokkit -s http -s ssh
 #postfix ?
 
 ## Add GitLab repository
-#`curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh`  
-#modify script_deb.sh line 135 if your server is under proxy  
-#```  
-#Before  
-#curl -sSf "${apt_config_url}" > $apt_source_path  
-#After  
-#curl -x <proxy-server-ip>:<port> --insecure "${apt_config_url}" > $apt_source_path  
-#```  
+```
+curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+
+```  
+
 
 
 
 ## Install gitlabce
 #modify  
 #use http:// if you use self signed certificate  
-sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>" yum -y install gitlab-ce  
+sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>"  yum -y install gitlab-ce  
 
 ## Configure Docker Registry
 #1. Run docker registy in gitlab server
