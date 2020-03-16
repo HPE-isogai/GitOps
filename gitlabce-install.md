@@ -73,7 +73,15 @@ sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>" yum -y install gitl
 
 - when you reconfigure without reinstalling packages  
 `sudo gitlab-ctl reconfigure` 
-  
+
+# git update 1.8.X -> latest
+https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/  
+```
+sudo yum remove git*
+sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install  git2u-all
+```
+
 # memo
 
 https://bugzilla.redhat.com/show_bug.cgi?id=1506395
