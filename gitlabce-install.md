@@ -80,6 +80,25 @@ yum install gitlab-runner
 https://docs.gitlab.com/runner/register/index.html
 1. Obtaiin a Token
 2. execute these commands
+```
+gitlab-runner register
+Runtime platform                                    arch=amd64 os=linux pid=9082 revision=1b659122 version=12.8.0
+Running in system-mode.
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+http://10.0.0.130/
+Please enter the gitlab-ci token for this runner:
+78xp4QN1etTxRyL2Zxcf
+Please enter the gitlab-ci description for this runner:
+[gitlab01]: runner01
+Please enter the gitlab-ci tags for this runner (comma separated):
+isogai
+Registering runner... succeeded                     runner=78xp4QN1
+Please enter the executor: custom, docker-ssh, virtualbox, docker+machine, docker-ssh+machine, docker, parallels, shell, ssh, kubernetes:
+shell
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+
+```
 
 ## Configure Docker Registry
 #1. Run docker registy in gitlab server  
