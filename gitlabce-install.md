@@ -74,7 +74,7 @@ sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>"  yum -y install git
 # git update 1.8.X -> latest
 https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/  
 ```
-sudo yum remove git*
+sudo yum remove git
 sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install  git2u-all
 ```
