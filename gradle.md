@@ -1,3 +1,7 @@
+https://spring.io/guides/gs/spring-boot-docker/
+
+## Gradle build
+
 ```
 ✔ ~/spring-demo [master L|✔]
 22:28 $ gradle tasks
@@ -208,7 +212,7 @@ BUILD SUCCESSFUL in 39s
 
 ```
 
-## JIB
+## jib
 ```
 23:00 $ ./gradlew jibDockerBuild --image=springio/gs-spring-boot-docker
 
@@ -228,3 +232,18 @@ Executing tasks:
 BUILD SUCCESSFUL in 2m 18s
 3 actionable tasks: 2 executed, 1 up-to-date
 ```
+jib -> push
+```
+docker push 10.0.0.131:5000/spring-demo-docker:0.1
+The push refers to repository [10.0.0.131:5000/spring-demo-docker]
+029a1b5fb4f2: Pushed
+ede142b838e3: Pushed
+08780e47b935: Pushed
+51856eed4a44: Pushed
+273420d2bcff: Pushed
+6189abe095d5: Pushed
+f47163e8de57: Pushed
+42a3027eaac1: Pushed
+0.1: digest: sha256:9385396eca1a6e2b736a7a704c2832582ce433ae3ff3c9307cae3044dcd5a889 size: 1998
+```
+
