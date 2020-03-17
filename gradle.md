@@ -207,3 +207,24 @@ BUILD SUCCESSFUL in 39s
 
 
 ```
+
+## JIB
+```
+23:00 $ ./gradlew jibDockerBuild --image=springio/gs-spring-boot-docker
+
+> Task :jibDockerBuild
+
+Containerizing application to Docker daemon as springio/gs-spring-boot-docker...
+Base image 'gcr.io/distroless/java:11' does not use a specific image digest - build may not be reproducible
+Using base image with digest: sha256:c94feda039172152495b5cd60a350a03162fce4f8986b560ea555de4d276ce19
+
+Container entrypoint set to [java, -cp, /app/resources:/app/classes:/app/libs/*, local.tetsuya.oc4cluster.apps.demo.DemoApplication]
+
+Built image to Docker daemon as springio/gs-spring-boot-docker
+Executing tasks:
+[==============================] 100.0% complete
+
+
+BUILD SUCCESSFUL in 2m 18s
+3 actionable tasks: 2 executed, 1 up-to-date
+```
