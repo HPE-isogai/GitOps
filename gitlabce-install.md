@@ -39,12 +39,17 @@ sudo lokkit -s http -s ssh
 
 ## Add GitLab repository
 ```
-curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+wget https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
+chmod +x script.rpm.sh
 
 ```  
-
-
-
+-- Modify script.rpm.sh under proxy environment
+```
+161c161
+<   curl -x 10.0.0.254:3128 --insecure  "${yum_repo_config_url}" > $yum_repo_path
+---
+>   curl -sSf "${yum_repo_config_url}" > $yum_repo_path
+```
 
 ## Install gitlabce
 #modify  
