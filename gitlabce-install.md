@@ -10,7 +10,7 @@ VMware vSphere 6.7 (VMware ESXi, 6.7.0, 13006603)
 DNS (dnsmasq: Exnternal)  
 
 # Procedure
-## Install Ubuntu 18.04
+## Install GitLab CE on CentOS7
 Set Static IP address   
 ## Set Hostname
 FQDN hostname  
@@ -56,6 +56,31 @@ chmod +x script.rpm.sh
 #use http:// if you use self signed certificate  
 sudo EXTERNAL_URL="http://your-gitlab-server-hostnameFQDN"  yum -y install gitlab-ce  
 
+## If you fail fail install
+- when you want reinstall package  
+```
+# du -sh /var/cache/yum     <-キャッシュの確認
+# rm -rf /var/cache/yum/*　 <-キャッシュ削除
+# yum clean all
+```
+## GitLab Runner setup
+https://docs.gitlab.com/runner/install/linux-repository.html
+### git update 1.8.X -> latest
+https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/  
+```
+sudo yum remove git
+sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install  git2u-all
+```
+```
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | sudo bash
+yum install gitlab-runner
+```
+### Register GitLab Runner
+https://docs.gitlab.com/runner/register/index.html
+1. Obtaiin a Token
+2. execute these commands
+
 ## Configure Docker Registry
 #1. Run docker registy in gitlab server  
 #https://docs.gitlab.com/ee/administration/packages/container_registry.html  
@@ -65,24 +90,11 @@ sudo EXTERNAL_URL="http://your-gitlab-server-hostnameFQDN"  yum -y install gitla
 #* modify `registry_external_url`  
 #3. `gitlab-ctl reconfigure`  
 
-## If you fail fail install
-- when you want reinstall package  
-```
-# du -sh /var/cache/yum     <-キャッシュの確認
-# rm -rf /var/cache/yum/*　 <-キャッシュ削除
-# yum clean all
-```
 
 - when you reconfigure without reinstalling packages  
 `sudo gitlab-ctl reconfigure` 
 
-# git update 1.8.X -> latest
-https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/  
-```
-sudo yum remove git
-sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
-sudo yum -y install  git2u-all
-```
+
 
 # memo
 
