@@ -54,7 +54,7 @@ chmod +x script.rpm.sh
 ## Install gitlabce
 #modify  
 #use http:// if you use self signed certificate  
-sudo EXTERNAL_URL="http://<your-gitlab-server-hostnameFQDN>"  yum -y install gitlab-ce  
+sudo EXTERNAL_URL="http://<<your-gitlab-server-hostnameFQDN>>"  yum -y install gitlab-ce  
 
 ## Configure Docker Registry
 #1. Run docker registy in gitlab server
