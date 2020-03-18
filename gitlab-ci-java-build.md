@@ -8,3 +8,6 @@
 - install oc
 - install kubectl
 - move kubeconfig
+
+## add gradle proxy setting
+https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy
