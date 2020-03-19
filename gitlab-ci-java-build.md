@@ -6,6 +6,7 @@
 - install java
   - yum install java-11-openjdk
 - install oc
+https://docs.openshift.com/container-platform/4.2/installing/installing_bare_metal/installing-bare-metal.html#cli-installing-cli_installing-bare-metal
 - install kubectl
 - move kubeconfig
 
