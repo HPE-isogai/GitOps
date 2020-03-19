@@ -123,3 +123,7 @@ https://qiita.com/chroju/items/375582799acd3c5137c7
 
 ## GitLab commands
 https://qiita.com/okdokdokdokdokd/items/4d3b44e6f2f30652fb58
+
+## Uninstall
+https://qiita.com/yubaxp/items/75a6b6836b9f647b36ae
+https://stackoverflow.com/questions/31107017/gitlab-update-curl-returns-ssl-error-35/39973422
