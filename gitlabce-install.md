@@ -121,3 +121,5 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1506395
 https://kikumoto.hatenablog.com/entry/2016/06/04/124922
 https://qiita.com/chroju/items/375582799acd3c5137c7
 
+## GitLab commands
+https://qiita.com/okdokdokdokdokd/items/4d3b44e6f2f30652fb58
